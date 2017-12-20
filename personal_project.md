@@ -82,11 +82,13 @@ Total points required: 50
 * An important concept in planning is the "MVP". This stands for Mininum Viable Product. Simply, what is the smallest, simplest, least-amount-of-features version of your product that you could make that would still be considered completed and passable. For example: I am making a simple chat app. What are some "MVP Features"? The ability to type in a message, the ability to send a message, and the ability to recieve a message. If I want to add any other features, I need to carefully think if they are part of my MVP. A cool animation whenever I send a message? A notification sound when I recieve a message? Those aren't absolutely necessary for my app to function, so I need to put them aside until I finish all my MVP features. When planning, make a list of all the features your app **needs** to function and work on only them until they are done.
 * Another important facet of planning is setting tasks for yourself. You can waste a lot of time trying to figure what exactly to do next. Switching constantly between thinking about what to do and actually doing can really slow you down. It's a good idea to take some time to split your project into tasks. The more the better! A good goal is to see if you can split your entire project into hour chunks. If you think you have made as many tasks as you can think of, break the tasks you have into smaller tasks. This will allow you to just focus on actually doing the tasks, speeding up your development times. Trello.com is a good site for task management.
 * It's worth noting: plans don't need to be set in stone! You'll find the need for some extra endpoint, or you'll need to change your schemas up, or you'll realize a given feature really isn't MVP status. That's completely fine, it's important to be agile. It's important to plan, but it's also important not to waste time trying to come up with every single eventuality.
-* To aid in planning, you might want to use the [project-plan.pdf](project-plan.pdf) document in this repo. It is optional, and you can use Trello instead or in addition.
+* To aid in planning, you might want to use the [project-plan.pdf](project-plan.pdf) document in this repo. It is optional, and you can use Twilio instead or in addition.
 
 #### Domain Registration
 
 Domain Registration is the process for registering a domain name, which identifies one or more IP addresses with a name that is easier to remember and use in URLs to identify particular web pages. There are many domain registrars out there and not every choice will be the perfect fit in every way, so do your own research. That being said some of the more popular registrars are: namecheap, bluehost, HostGator and GoDaddy.
+
+Points: A registered URL that simply redirects you to an IP will not count towards your domain registration points. It must be fully integrated to the point where your route urls will add on to the end of your registered domain. As in, www.YourSite.com/#/Home opposed to 138.68.255.191/#/Home and so on.
 
 Gotchas:
 * Be aware that registering for a domain name isn’t free. There are many sites that will offer a hosting package that will then give you a free domain name. Take “free” with a grain of salt. It is often cheaper to host elsewhere then wait for a promotion (they happen very often on GoDaddy) where you can register a domain name for $0.99/year.
@@ -148,6 +150,8 @@ Points:
 
 Socket.io enables real-time bidirectional event-based communication. It is a great tool to show real-time analytics, instant messengers, push notifications, or do document collaboration. Socket.io works very well with and is simple to integrate into ExpressJS. The format of sockets in your server is similar to creating endpoints. The socket.io docs are not only great they also have a quick tutorial on how to set up a chat application - https://socket.io/get-started/chat/
 
+Points: To show your ability to use socket.io ,and get the full 20 points, you must create and use at minimum three unique listeners as well as three unique emitters on both the server and client individually (12 total). To get 10 points you must create one unique listener as well as one unique emitter on both the server and the client individually (4 total).
+
 Gotchas: 
 * There are many ways to decide who is the recipient of a particular “emit”. Be advised that one way may work in a certain situation but may not in another. The docs have a great emit cheatsheet that will be valuable along the way.
 * There are two important parts to Socket.io (server and client) and they both come with the ‘socket.io’ npm package.
@@ -174,6 +178,8 @@ Nodemailer is a module for Node.js applications to make sending emails very simp
 
 Be advised that there are many challenges with email. Worse still is that email behaves in a not fully predictable way, e.g. sometimes mail will go to spam, and sometimes that same email content, sent later, won't. This is not to discourage you from trying. The reality is that you'll almost certainly send automated email at some point in your career, so learning now still helps, but just to set your expecations.
 
+Points: The ability to send an email with dynamic content with at least 5 in-line styles to a dynamic email address is the requirements for points.
+
 Gotchas: 
 * Each email server is allowed to operate as it sees fit. The biggest issue is that your email might be flagged as spam by one provider and not another. The reasons messages are marked as spam are rarely given (as this knowledge would aid spammers). 
 * Email clients (the software that displays the email) can be picky about format. If you only need very simple email messages, you'll be fine. Be advised that all styling must be inline (no external stylesheets; you must use the style attribute), and some styles are ignored and thus don't work, such as flexbox. The rules change over time.
@@ -183,9 +189,11 @@ Gotchas:
 
 Twilio has a wide range of servies that can be used. They vary from sending SMS messages, phone calls, real-time video, as well as programmable chats all from your Node.js server. For the sake of this project, it would be recommended that you limit your Twilio experience to just the SMS service. Twilio’s SMS service is very easy to use after you go through the extensive set up it requires. 
 
+Points: Demonstrating the ablity to send specific information (the makes sense with your project's overall idea) though SMS will net you points here.
+
 Gotchas:
 * Twilio does not require a traditional “API key”. To set up your Twilio SMS service you must request an account SID and a Twilio Authentication token. You must then apply for a phone number that will be handling all of the message sending.
-* There is a free account type (yay!) as well as paid accounts. With the free account, you are limited to sending messages to a single phone number that you choose during creation and only that number while using the free account. A free Twilio account can be great if you just want to be the sole receiver or the information. If you want to have your users receive messages, you’ll have to fork over some moneys per message sent. Consider a paid plan, so potential employers can try your site and type in their own phone number.
+* There is a free account type (yay!) as well as paid accounts. With the free account, you are limited to sending messages to a single phone number that you choose during creation and only that number while using the free account. A free Twilio account can be great if you just want to be the sole receiver or the information. If you want to have your users receive messages, you’ll have to fork over some moneys per message sent.
 
 #### CSS-in-JS
 
@@ -206,6 +214,8 @@ Examples of CSS-in-JS libraries:
 #### Less or Sass
 
 Sass and Less are both CSS preprocessors, meaning they extend the CSS language, adding features that allow variables, mixins, functions, and many other techniques. They are a way to simplify your CSS workflow, making development and maintenance tasks easier. Though they are both essentially doing the same job, Sass is used far more in the industry and it is the recommended one if you choose to use a CSS preprocessor.
+
+Points: Using at minimum one example each of variables, mixins, and inheritance as well as 50% of your project wide styling being done in Sass/Less format is the requirment for points. 
 
 Gotchas:
 * You might hear the term Sass/SCSS, that’s because they are (for the most part) the same thing.
